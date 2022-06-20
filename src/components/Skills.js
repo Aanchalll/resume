@@ -1,10 +1,7 @@
 import React from "react";
 import {
-  Box,
-  Typography,
-  Divider,
   ListItem,
-  List,
+  Grid,
   ListItemAvatar,
   Avatar,
   ListItemText,
@@ -12,49 +9,39 @@ import {
 
 export default function Skills() {
   return (
-    <Box id="skills" class="heading-primary card-padding">
-      <ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/reactsign.png" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem>
-      <ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/nodejs_logo.png" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem><ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/java.jpg" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem><ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/mysql_PNG35.png" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem><ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/sql.png" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem><ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/html-icon-png-13.jpg" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem><ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/css.png" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem><ListItem alignItems="center" className="heading-primary-sub">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/JS.jpg" />
-        </ListItemAvatar>
-        <ListItemText primary="Brunch this weekend?" />
-      </ListItem>
-    </Box>
+    <Grid container id="skills" className="heading-primary card-padding">
+
+      <DynamicComponent srcValue="/reactsign.png"/>
+      
+      <DynamicComponent srcValue="/nodejs_logo.png"/>
+      
+      <DynamicComponent srcValue="/java.jpg"/>
+
+      <DynamicComponent srcValue="/mysql_PNG35.png"/>
+
+      <DynamicComponent srcValue="/sql.png"/>
+      
+      <DynamicComponent srcValue="/html-icon-png-13.jpg"/>
+
+      <DynamicComponent srcValue="/css.png"/>
+
+      <DynamicComponent srcValue="/JS.jpg"/>
+
+    </Grid>
   );
+}
+
+
+
+const DynamicComponent=(props) =>{
+    const{srcValue}=props;
+    return(
+    <Grid item xs={12} sm={3} lg={3} className="heading-primary-sub">
+    <ListItem alignItems="center" >
+      <ListItemAvatar>
+        <Avatar alt="Remy Sharp" src={srcValue} />
+      </ListItemAvatar>
+      <ListItemText primary="Brunch this weekend?" />
+    </ListItem>
+    </Grid>)
 }
