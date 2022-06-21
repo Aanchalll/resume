@@ -45,13 +45,14 @@ code {
 }
 
 .text-box {
-  position: absolute;
-  top: 3%;
-  margin:1rem;
-  left: 5%;
+  position: relative;
+  /* top: 3%; */
+  margin:5rem;
+  /* left: 5%; */
   /* transform: translate(-50%, -50%); */
   text-align: center;
   width: 90%;
+  /* height: 98%; */
 }
 
 .heading-primary {
@@ -124,7 +125,7 @@ code {
 
   /* For tablets: */
   .text-box {
-  margin:0;
+  margin:5%;
   }
   .heading-primary-main {
     display: block;
