@@ -3,36 +3,38 @@ import {
   ListItem,
   Grid,
   ListItemAvatar,
-  Avatar,
   ListItemText,
   Divider,
-  Typography,
+  Typography
 } from "@mui/material";
-
+import CallIcon from '@mui/icons-material/Call';
+import EmailIcon from '@mui/icons-material/Email';
+import HomeIcon from '@mui/icons-material/Home';
+import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 export default function PersonalInformation() {
   return (
     <>
       <Divider />
-      <Grid container id="skills" className="heading-primary card-padding">
+      <Grid container id="personalInformation" className="heading-primary card-padding">
         <Grid item xs={12}>
-          <Typography variant="h3">Personal Information</Typography>
+          <Typography variant="h3">PI loremipsum</Typography>
         </Grid>
-        <DynamicComponent srcValue="/reactsign.png" />
-        <DynamicComponent srcValue="/nodejs_logo.png" />
-        <DynamicComponent srcValue="/java.jpg" />
-        <DynamicComponent srcValue="/mysql_PNG35.png" />
+        <DynamicComponent srcValue="/reactsign.png" IconImage={CallIcon}/>
+        <DynamicComponent srcValue="/nodejs_logo.png" IconImage={EmailIcon}/>
+        <DynamicComponent srcValue="/java.jpg" IconImage={HomeIcon}/>
+        <DynamicComponent srcValue="/mysql_PNG35.png" IconImage={BubbleChartIcon}/>
       </Grid>
     </>
   );
 }
 
 const DynamicComponent = (props) => {
-  const { srcValue } = props;
+  const {IconImage } = props;
   return (
     <Grid item xs={12} sm={3} lg={3} className="heading-primary-sub">
       <ListItem alignItems="center">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src={srcValue} />
+          <IconImage sx={{ color: "pink[500]" }} />
         </ListItemAvatar>
         <ListItemText primary="Brunch this weekend?" />
       </ListItem>

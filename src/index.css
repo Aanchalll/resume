@@ -17,12 +17,28 @@ code {
 #introduction {
   border-radius: 24px;
 }
-#skills {
+/* #skills {
   /* display: grid; */
   /* grid-template-columns: repeat(4, 1fr); */
-  color: #857768;
-}
+  /* color: #857768; 
+} */
 
+/* #responsive-nav {
+  display: none;
+  + label {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    font-size: 20px;
+    background: white;
+    box-shadow: $shadow;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s $cubic, color 0.3s $cubic;
+  }
+} */
 .card-padding {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -84,9 +100,28 @@ code {
     transform: translate(0);
   }
 }
+#sidebar {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  #sidebar {
+    top: 0px;
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    display: block;
+    box-shadow: -2px 2px 20px 0px #007dfe4a, 0px 0px 2px #007dfe4a;
+    background-color: #fff;
 
+  }
+  .sidebar-icon{
+    width: 2.8rem !important;
+    height:2.2rem !important;
+  }
+}
 
 @media only screen and (max-width: 800px) {
+
   /* For tablets: */
   .text-box {
   margin:0;

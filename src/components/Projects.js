@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <>
       <Divider />
-      <Grid container className="card-padding" justifyContent={"center"}>
+      <Grid container className="card-padding" justifyContent={"center"} id="projects">
         <Grid item xs={12}>
           <Typography variant="h3">Projects</Typography>
         </Grid>

@@ -4,13 +4,15 @@ import {
   Grid,
   ListItemAvatar,
   Avatar,
-  ListItemText,
+  ListItemText,Typography
 } from "@mui/material";
 
 export default function Skills() {
   return (
     <Grid container id="skills" className="heading-primary card-padding">
-
+<Grid item xs={12}>
+          <Typography variant="h3">Linkslorem ipsum</Typography>
+        </Grid>
       <DynamicComponent srcValue="/reactsign.png"/>
       
       <DynamicComponent srcValue="/nodejs_logo.png"/>

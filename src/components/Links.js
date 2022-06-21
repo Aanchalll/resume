@@ -3,36 +3,37 @@ import {
   ListItem,
   Grid,
   ListItemAvatar,
-  Avatar,
   ListItemText,
   Divider,
   Typography,
 } from "@mui/material";
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CodeIcon from '@mui/icons-material/Code';
 export default function Links() {
   return (
     <>
       <Divider />
-      <Grid container id="skills" className="heading-primary card-padding">
+      <Grid container id="links" className="heading-primary card-padding">
         <Grid item xs={12}>
-          <Typography variant="h3">Experiences</Typography>
+          <Typography variant="h3">Linkslorem ipsum</Typography>
         </Grid>
-        <DynamicComponent srcValue="/reactsign.png" />
-        <DynamicComponent srcValue="/nodejs_logo.png" />
-        <DynamicComponent srcValue="/java.jpg" />
-        <DynamicComponent srcValue="/mysql_PNG35.png" />
+        <DynamicComponent srcValue="/reactsign.png" IconImage={LinkedInIcon}/>
+        <DynamicComponent srcValue="/nodejs_logo.png" IconImage={GitHubIcon}/>
+        <DynamicComponent srcValue="/java.jpg" IconImage={CodeIcon}/>
+        <DynamicComponent srcValue="/mysql_PNG35.png" IconImage={GitHubIcon}/>
       </Grid>
     </>
   );
 }
 
 const DynamicComponent = (props) => {
-  const { srcValue } = props;
+  const {IconImage} = props;
   return (
     <Grid item xs={12} sm={3} lg={3} className="heading-primary-sub">
       <ListItem alignItems="center">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src={srcValue} />
+        <IconImage sx={{ color: "pink[500]" }} />
         </ListItemAvatar>
         <ListItemText primary="Brunch this weekend?" />
       </ListItem>

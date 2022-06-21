@@ -13,9 +13,9 @@ export default function Experience() {
   return (
     <>
       <Divider />
-      <Grid container className="card-padding" justifyContent={"center"}>
+      <Grid container className="card-padding" justifyContent={"center"} id='experience'>
         <Grid item xs={12}>
-          <Typography variant="h3">Experiences</Typography>
+          <Typography variant="h3">Experloremipsum </Typography>
         </Grid>
         <DynamicComponent />
         <DynamicComponent />
@@ -28,7 +28,7 @@ export default function Experience() {
 
 const DynamicComponent = (props) => {
   return (
-    <Grid item xs={12} sm={6} lg={6}>
+    <Grid item xs={12} sm={6} lg={6} >
       <ListItem alignItems="flex-start" className="heading-primary-sub-left">
         <ListItemAvatar>
           <Avatar alt="Remy Sharp" src="/reactsign.png" />
