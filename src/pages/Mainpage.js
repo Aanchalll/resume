@@ -17,6 +17,7 @@ export default function Mainpage() {
       <Projects />
       <Links />
       <PersonalInformation />
-    </Card></>  
+    </Card>
+    </>  
   );
 }

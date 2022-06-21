@@ -25,9 +25,9 @@ export default function Sidebar() {
                     sx: {
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-            mt:-3,
+            mt:-4,
             ml: 2,
-
+            boxShadow: "-2px 2px 20px 0px #007dfe4a, 0px 0px 2px #007dfe4a",
             '& .MuiAvatar-root': {
               width: 32,
               height: 32,
