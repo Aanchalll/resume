@@ -105,14 +105,14 @@ code {
 }
 @media only screen and (max-width: 600px) {
   #sidebar {
-    top: 0px;
+    bottom: 1%;
     position: fixed;
-    right: 0;
+    right: 1%;
     z-index: 3;
     display: block;
     box-shadow: -2px 2px 20px 0px #007dfe4a, 0px 0px 2px #007dfe4a;
     background-color: #fff;
-
+    border-radius: 20px;
   }
   .sidebar-icon{
     width: 2.8rem !important;
