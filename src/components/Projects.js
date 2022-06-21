@@ -34,11 +34,12 @@ const DynamicComponent = (props) => {
           <Avatar alt="Remy Sharp" src="/reactsign.png" />
         </ListItemAvatar>
         <ListItemText
+          style={{textAlign:"justify"}}
           primary="Brunch this weekend?"
           secondary={
             <React.Fragment>
               <Typography
-                sx={{ display: "inline" }}
+                sx={{ display: "inline"}}
                 component="span"
                 variant="body2"
                 color="text.primary"
