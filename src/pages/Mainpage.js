@@ -6,7 +6,6 @@ import PersonalInformation from "../components/PersonalInformation";
 import Projects from "../components/Projects";
 import Sidebar from "../components/Sidebar";
 import Skills from "../components/Skills";
-
 export default function Mainpage() {
   return (
    <> <Sidebar/>
