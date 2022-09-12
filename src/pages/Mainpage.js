@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import Experience from "../components/Experience";
 import Introduction from "../components/Introduction";
 import Links from "../components/Links";
