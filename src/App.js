@@ -1,6 +1,5 @@
 import "./App.css";
 import Mainpage from "./pages/Mainpage";
-// import AnimatedCursor from "react-animated-cursor";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import PortFolio from "./pages/PortFolio";
 import Website from "./pages/Website";
@@ -40,8 +39,6 @@ function App() {
         '.link'
       ]}
       />
-      {/* <Mainpage /> */}
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WebsiteHeader />}>

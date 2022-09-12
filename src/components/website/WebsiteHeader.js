@@ -13,16 +13,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
 
-const navLinks = [
-  {name:'Home',link:'/'},
-  {name:'About Us',link:'/about-us'},
-  {name:'Contact Us',link:'/contact-us'},
-];
+// const navLinks = [
+//   {name:'Home',link:'/'},
+//   {name:'About Us',link:'/about-us'},
+//   {name:'Contact Us',link:'/contact-us'},
+// ];
 
 export default function WebsiteHeader(props) {
   let navigate = useNavigate();
