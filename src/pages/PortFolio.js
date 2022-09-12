@@ -1,21 +1,12 @@
-import { Card } from "@mui/material";
-// import Experience from "../components/Experience";
-// import Introduction from "../components/Introduction";
-// import Links from "../components/Links";
-// import PersonalInformation from "../components/PersonalInformation";
-// import Projects from "../components/Projects";
-// import Sidebar from "../components/Sidebar";
-// import Skills from "../components/Skills";
+import { Button, Card } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 export default function PortFolio() {
+  let navigate = useNavigate();
   return (
    <>
     <Card className="text-box">
-      {/* <Introduction />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Links />
-      <PersonalInformation /> */}
+      <Button onClick={()=>{  navigate("/", { replace: true })}}> click me to go back</Button>
+      portfoliorttdtdrtdrtdrr
     </Card>
     </>  
   );

@@ -76,13 +76,13 @@ export default function Sidebar() {
         </MenuItem>
       </Menu>
 
-      <Modal>
+      {/* <Modal>
 <>
 <HeaderButtonStyle color="inherit" href="/#skills">
             Skills
           </HeaderButtonStyle>
 </>
-      </Modal>
+      </Modal> */}
     </>
   );
 }
