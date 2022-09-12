@@ -1,10 +1,16 @@
 import "./App.css";
 import Mainpage from "./pages/Mainpage";
+// import AnimatedCursor from "react-animated-cursor";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import PortFolio from "./pages/PortFolio";
+import Website from "./pages/Website";
 import AnimatedCursor from "react-animated-cursor";
+import WebsiteHeader from "./components/website/WebsiteHeader";
+
 function App() {
   return (
     <div className="App">
-      <AnimatedCursor
+        <AnimatedCursor
         innerSize={6}
         outerSize={30}
         innerScale={1}
@@ -13,10 +19,13 @@ function App() {
         hasBlendMode
         outerStyle={{
           border: "2px solid #007dfe4a",
+          zIndex:'99999'
         }}
         innerStyle={{
+          zIndex:'99999',
           backgroundColor: "#000",
         }}
+        // sx={{z-index}}
         clickables={[
         'a',
         'input[type="text"]',
@@ -31,7 +40,18 @@ function App() {
         '.link'
       ]}
       />
-      <Mainpage />
+      {/* <Mainpage /> */}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<WebsiteHeader />}>
+            <Route index element={<Mainpage />} />
+            <Route path="portfolio" element={<PortFolio />} />
+            <Route path="about-us" element={<Website />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <Outlet />
     </div>
   );
 }

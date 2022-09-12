@@ -9,14 +9,14 @@ import Skills from "../components/Skills";
 export default function Mainpage() {
   return (
    <> <Sidebar/>
-    <Card className="text-box">
+    <div className="text-box">
       <Introduction />
       <Skills />
       <Experience />
       <Projects />
       <Links />
       <PersonalInformation />
-    </Card>
+    </div>
     </>  
   );
 }
